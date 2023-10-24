@@ -3,7 +3,7 @@ import design from "../Images/design.png"
 import {BsInstagram,BsFacebook,BsTwitter} from "react-icons/bs"
 function Hero() {
   return (
-    <div className="min-h-screen  items-center justify-center bg-gradient-to-r from-[#c5e1f6] to-[#eeb0bf] rounded-t-[24px]">
+    <div className="min-h-screen mt-4 items-center justify-center bg-gradient-to-r from-[#c5e1f6] to-[#eeb0bf] rounded-t-[24px]">
       <div className="py-20 grid lg:flex justify-between p-3 items-center gap-20">
         <div>
           <h3 className="text-white font-bold tracking-[.25em] uppercase">
