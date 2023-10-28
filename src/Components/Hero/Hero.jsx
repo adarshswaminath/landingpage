@@ -1,93 +1,56 @@
-import React, { useState, useRef } from "react";
-import design from "../../Images/design.png";
-import { BsInstagram, BsFacebook, BsTwitter } from "react-icons/bs";
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-
+import {AiOutlineInstagram,AiOutlineFacebook} from "react-icons/ai"
+import {PiTelegramLogoDuotone} from "react-icons/pi"
+import RightSquareArrow from "./RightSquareArrow";
 function Hero() {
-  const images = [
-    {
-      url: design,
-      caption: "Image 1",
-    },
-    {
-      url: "https://igorazaa.vercel.app/assets/project3.c22f55d4.png",
-      caption: "Image 2",
-    },
-    {
-      url: "https://igorazaa.vercel.app/assets/project4.8121d93e.png",
-      caption: "Image 3",
-    },
-  ];
-
-  const [slideIndex, setSlideIndex] = useState(0);
-  const carouselRef = useRef(null);
-
-  const nextSlide = () => {
-    if (carouselRef.current) {
-      const nextIndex = (slideIndex + 1) % images.length;
-      setSlideIndex(nextIndex);
-      carouselRef.current.next();
-    }
-  };
-
-  const prevSlide = () => {
-    if (carouselRef.current) {
-      const prevIndex = (slideIndex - 1 + images.length) % images.length;
-      setSlideIndex(prevIndex);
-      carouselRef.current.prev();
-    }
-  };
-
   return (
-    <div className="min-h-screen mt-4 items-center justify-center bg-gradient-to-r from-[#c5e1f6] to-[#eeb0bf] rounded-t-[24px]">
-      <div className="py-20 grid lg:flex justify-between p-3 items-center gap-20">
-        <div>
-          {/* ... Your existing content ... */}
-          <div>
-          <h3 className="text-white font-bold tracking-[.25em] uppercase">
-            build anything
-          </h3>
-          <h1 className="text-3xl uppercase tracking-tight text-gray-600 sm:text-6xl sm:tracking-tight lg:text-[2rem] xl:text-[6rem] xl:tracking-tight 2xl:text-[6.5rem]">
-            innovation{" "}
-          </h1>
-          <h1 className="text-3xl font-bold uppercase tracking-tight text-gray-600 sm:text-6xl sm:tracking-tight lg:text-[4rem] xl:text-[4rem] xl:tracking-tight 2xl:text-[6.5rem]">
-            meets reality
-          </h1>
-          <p className="mt-3 max-w-sm text-gray-500">
+    <div className="min-h-screen bg-gradient-to-r from-[#c5e1f6] to-[#eeb0bf] rounded-t-[25px]">
+      <section>
+        <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+          <div className="mr-auto place-self-center lg:col-span-7">
+            <h2 className="text-white font-bold uppercase tracking-[4px] mb-2">build anything</h2>
+            <h1 className="max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl uppercase text-gray-600">
+              innovation{" "}<br/>
+              <span className="font-extrabold mt-4 max-w-2xl mb-4 text-4xl tracking-tight leading-none md:text-5xl xl:text-6xl uppercase text-gray-600">Meets Reality</span>
+            </h1>
+            <p className="max-w-2xl mb-6 font-light text-gray-600 lg:mb-8 md:text-lg lg:text-xl">
             We're excited to have you on our journey.Your presence makes this
-            day even more specialx
-          </p>
-          <button className="px-6 py-2 font-bold uppercase text-cyan-500 mt-6 bg-white rounded-full">get started</button>
-          <div className="mt-16 flex items-center space-x-5 justify-center lg:justify-start">
-            <BsInstagram className="text-2xl text-white"/>
-            <BsFacebook className="text-2xl text-white"/>
-            <BsTwitter className="text-2xl text-white"/>
-
+              day even more specialx
+            </p>
+            <a
+              href="#"
+              className="inline-flex items-center justify-center px-5 py-2 mr-3 uppercase font-bold text-center text-blue-500 bg-white focus:ring-4 rounded-full "
+            >
+              Get started
+              <svg
+                className="w-5 h-5 ml-2 -mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </a>
+            <div className="flex gap-3 py-4 lg:py-12">
+            <span className="text-white text-2xl">
+              <AiOutlineInstagram/>
+            </span>
+            <span className="text-white text-2xl">
+              <AiOutlineFacebook/>
+            </span>
+            <span className="text-white text-2xl">
+              <PiTelegramLogoDuotone/>
+            </span>
+          </div>
+          </div>
+          <div className="mt-4 lg:mt-0 lg:col-span-5 lg:flex">
+            <RightSquareArrow/>
           </div>
         </div>
-          
-        </div>
-        <div className="shadow-xl p-3 flex items-center justify-center">
-          <Carousel
-            useKeyboardArrows={true}
-            showArrows={false}
-            showThumbs={false}
-            autoPlay={true}
-            infiniteLoop={true}
-            selectedItem={slideIndex}
-            ref={carouselRef}
-            onMouseOver={() => carouselRef.current.pause()}
-            onMouseOut={() => carouselRef.current.start()}
-          >
-            {images.map((image, index) => (
-              <div className="slide" key={index}>
-                <img src={image.url} alt={image.caption} className="p-2 rounded-lg lg:h-96 lg:w-96 mt-2" />
-              </div>
-            ))}
-          </Carousel>
-        </div>
-      </div>
+      </section>
     </div>
   );
 }
