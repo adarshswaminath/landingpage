@@ -1,7 +1,7 @@
 import {AiOutlineInstagram,AiOutlineFacebook} from "react-icons/ai"
 import {PiTelegramLogoDuotone} from "react-icons/pi"
 import RightSquareArrow from "./RightSquareArrow";
-function MainHero() {
+function MainHero({Increment}) {
   return (
     <div className="min-h-screen bg-gradient-to-r from-[#c5e1f6] to-[#eeb0bf] rounded-t-[25px]">
       <section>
@@ -46,9 +46,9 @@ function MainHero() {
             </span>
           </div>
           </div>
-          <div className="mt-4 lg:mt-0 lg:col-span-5 lg:flex">
+          <button onClick={Increment} className="mt-4 lg:mt-0 lg:col-span-5 lg:flex">
             <RightSquareArrow/>
-          </div>
+          </button>
         </div>
       </section>
     </div>
