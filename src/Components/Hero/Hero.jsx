@@ -3,7 +3,7 @@ import { PiTelegramLogoDuotone } from "react-icons/pi";
 import RightSquareArrow from "./RightSquareArrow";
 function Hero() {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-[#c5e1f6] to-[#eeb0bf] rounded-t-[25px]">
+    <div className="min-h-screen">
       <section className="h-screen grid lg:flex items-center lg:justify-between py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-12">
         <div>
           <h3 className="text-white font-extrabold tracking-[2px] ">
@@ -19,14 +19,14 @@ function Hero() {
             day even more specialx
           </p>
           {/* btn */}
-          <div className="mt-3">
+          <div className="mt-5">
             <button className="flex items-center gap-2 bg-white rounded-full uppercase p-2 px-5 font-bold text-blue-500">
               get started
               <ArrowSvg />
             </button>
           </div>
           {/* social icons */}
-          <div className="flex mt-2 gap-3 mx-2 text-2xl text-white">
+          <div className="flex mt-5 gap-3 mx-2 text-2xl text-white">
             <a href="#"><AiOutlineInstagram/></a>
             <a href="#"><AiOutlineFacebook/></a>
             <a href="#"><PiTelegramLogoDuotone/></a>

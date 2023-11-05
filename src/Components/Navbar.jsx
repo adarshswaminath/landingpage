@@ -8,10 +8,10 @@ const Navbar = () => {
       </div>
       {/*  */}
       <div className="hidden lg:flex items-center gap-4">
-        <span className="font-bold uppercase text-gray-500 hover:text-cyan-500">Home</span>
-        <span className="font-bold uppercase text-gray-500 hover:text-cyan-500">Service</span>
-        <span className="font-bold uppercase text-gray-500 hover:text-cyan-500">Resources</span>
-        <span className="font-bold uppercase text-gray-500 hover:text-cyan-500">Contact</span>
+        <a className="font-bold uppercase text-gray-500 hover:text-cyan-500 cursor-pointer">Home</a>
+        <a className="font-bold uppercase text-gray-500 hover:text-cyan-500 cursor-pointer">Service</a>
+        <a className="font-bold uppercase text-gray-500 hover:text-cyan-500 cursor-pointer">Resources</a>
+        <a className="font-bold uppercase text-gray-500 hover:text-cyan-500 cursor-pointer">Contact</a>
 
       </div>
     </div>
