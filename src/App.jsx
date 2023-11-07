@@ -7,6 +7,9 @@ import Service from "./Components/Service/Service"
 import Resources from "./Components/Resources/Resources"
 import Contact from "./Components/Contact/Contact"
 import Career from "./Components/Career/Career"
+import Blog from "./Components/Resources/Blog/Blog"
+import Course from "./Components/Resources/Course/Course"
+import Product from "./Components/Resources/Products/Product"
 
 function AboutSection(){
   return(
@@ -29,6 +32,10 @@ function App() {
           <Route exact path="/resources" element={<Resources/>}></Route>
           <Route exact path="/contact" element={<Contact/>}></Route>
           <Route exact path="/career" element={<Career/>}></Route>
+          <Route exact path="/blog" element={<Blog/>}></Route>
+          <Route exact path="/products" element={<Product/>}></Route>
+          <Route exact path="/course" element={<Course/>}></Route>
+
         </Routes>
 
       <Footer/>
