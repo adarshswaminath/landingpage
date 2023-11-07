@@ -1,4 +1,6 @@
+import { Link } from "react-router-dom";
 import logo from "../Images/logo.png";
+const linkStyle = "font-bold uppercase text-gray-500 hover:text-cyan-500 cursor-pointer"
 const Navbar = () => {
   return (
     <div className="top-0 right-0 sticky p-3 flex items-center justify-between z-50 bg:blur backdrop-blur bg-white/10 bg-opacity-30">
@@ -7,11 +9,13 @@ const Navbar = () => {
         <h2 className="text-3xl font-bold text-gray-500">IGORAZA</h2>
       </div>
       {/*  */}
-      <div className="hidden lg:flex items-center gap-4">
-        <a className="font-bold uppercase text-gray-500 hover:text-cyan-500 cursor-pointer">Home</a>
-        <a className="font-bold uppercase text-gray-500 hover:text-cyan-500 cursor-pointer">Service</a>
-        <a className="font-bold uppercase text-gray-500 hover:text-cyan-500 cursor-pointer">Resources</a>
-        <a className="font-bold uppercase text-gray-500 hover:text-cyan-500 cursor-pointer">Contact</a>
+      <div className="hidden md:flex lg:flex items-center gap-4">
+        <Link to="/" className={`${linkStyle}`}>Home</Link>
+        <Link to="/service" target="_blank" className={`${linkStyle}`}>Service</Link>
+        <Link to="/resources" target="_blank" className={`${linkStyle}`}>Resources</Link>
+        <Link to="/contact"  target="_blank" className={`${linkStyle}`}>Contact</Link>
+        <Link to="/career" target="_blank" className={`${linkStyle}`}>Careers</Link>
+
 
       </div>
     </div>
