@@ -25,7 +25,7 @@ const aboutList = [
 
 function About() {
   return (
-    <div className="grid lg:flex w-full text-gray-600 ">
+    <div className="grid lg:flex lg:px-12 w-full text-gray-600 ">
       <section className="flex flex-col justify-center">
         <h1 className="text-3xl lg:text-4xl font-extrabold">About us</h1>
         <p className="text-xl mt-3 mb-3 tracking-wide">

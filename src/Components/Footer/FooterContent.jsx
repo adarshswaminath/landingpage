@@ -34,7 +34,7 @@ function FooterContent() {
           className="w-[272px] h-[77px] object-contain"
           alt="Logo"
         />
-        <p>Start with something simple and small, then expand over time</p>
+        <p className="mt-2">Start with something simple and small, then expand over time</p>
       </div>
       <div className="grid gap-4 lg:flex lg:space-x-8 justify-between items-center">
         {FooterLinks.map((value) => (

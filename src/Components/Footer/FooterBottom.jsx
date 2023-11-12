@@ -2,7 +2,7 @@ import { AiOutlineInstagram, AiOutlineFacebook } from "react-icons/ai";
 import { PiTelegramLogoDuotone } from "react-icons/pi";
 function FooterBottom() {
   return (
-    <div className="grid lg:flex justify-between text-center items-center">
+    <div className="mt-6 grid lg:flex justify-between text-center items-center">
       <h4 className="text-xl max-w-md lg:w-full">
         ⒸCopyright & All Rights Reserved 2023 IGORAZA PVT LTD. Designed By
         <span className="text-[#e60b42]"> IGORAZA</span>

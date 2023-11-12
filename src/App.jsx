@@ -25,7 +25,7 @@ function App() {
     <Router>
       <div className='App'>
       <Navbar/>
-      <div className='bg-gradient-to-r from-[#c5e1f6] to-[#eeb0bf] rounded-t-[25px]'>
+      <div className='bg-gradient-to-r from-[#c5e1f6] to-[#eeb0bf] rounded-t-[25px] flex flex-col items-center'>
         <Routes>
           <Route exact path="/" element={<AboutSection/>}></Route>
           <Route exact path="/service" element={<Service/>}></Route>

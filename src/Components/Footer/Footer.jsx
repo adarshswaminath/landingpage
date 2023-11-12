@@ -5,7 +5,7 @@ import FooterBottom from './FooterBottom'
 
 function Footer() {
   return (
-    <div className='py-12 p-4'>
+    <div className='py-12 p-4 '>
         <FooterService/>
         <FooterContent/>
         <hr className='border-gray-600 mt-4 mb-4'/>

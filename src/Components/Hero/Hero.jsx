@@ -9,7 +9,7 @@ function Hero() {
           <h3 className="text-white font-extrabold tracking-[2px] ">
             BUILD ANYTHING
           </h3>
-          <h1 className="mb-4 text-5xl lg:text-7xl tracking-tight leading-none text-gray-800">
+          <h1 className="mb-4 text-5xl lg:text-7xl xl:text-8xl tracking-tight leading-none text-gray-800">
             INNOVATION
             <br />
             <span className="font-extrabold">MEETS REALITY</span>
